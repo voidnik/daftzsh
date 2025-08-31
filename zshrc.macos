@@ -1,0 +1,294 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# Path to Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Path to your Oh My Zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="daftprompt"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+# zstyle ':omz:update' frequency 13
+
+# Disable the asynchronous Git prompt feature, forcing Git status information to be processed synchronously.
+zstyle ':omz:alpha:lib:git' async-prompt no
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-syntax-highlighting zsh-completions zsh-autosuggestions history-substring-search)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='nvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch $(uname -m)"
+
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# eza (https://github.com/eza-community/eza)
+alias ls='eza'
+
+#alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+#alias e='emacs -nw -q --load "~/.emacs.d.daftemacs/init-lite.el"'
+#alias emacs-nw='emacs -nw'
+#alias emacsclient-nw='emacsclient -nw'
+
+alias jupyter-python-example='jupyter notebook ~/Google\ Drive/Examples/python'
+
+alias ssh-genai-rtx6000-ada='sshpass -pgenai4321! ssh -p6022 ubuntu@superN.synology.me'
+alias sftp-genai-rtx6000-ada='sshpass -pgenai4321! sftp -oPort=6022 ubuntu@superN.synology.me'
+alias ssh-genai-a100='sshpass -pgenai1! ssh genai@50.1.107.109'
+alias sftp-genai-a100='sshpass -pgenai1! sftp genai@50.1.107.109'
+alias ssh-genai-a6000='sshpass -pgenai4321 ssh -p33322 genai@1.234.35.109'
+alias sftp-genai-a6000='sshpass -pgenai4321 sftp -oPort=33322 genai@1.234.35.109'
+alias ssh-genai-rtx3090='sshpass -pmplab2018! ssh -p35706 mplab@50.1.107.104'
+alias sftp-genai-rtx3090='sshpass -pmplab2018! sftp -oPort=35706 mplab@50.1.107.104'
+alias ssh-genai-tesla-t4-1='sshpass -pmplab2018! ssh user@50.1.107.106'
+alias sftp-genai-tesla-t4-1='sshpass -pmplab2018! sftp user@50.1.107.106'
+alias ssh-genai-tesla-t4-2='sshpass -pmplab2018! ssh -p35706 skt@50.1.107.107'
+alias sftp-genai-tesla-t4-2='sshpass -pmplab2018! sftp -oPort=35706 skt@50.1.107.107'
+alias ssh-genai-tesla-v100='sshpass -pmplab2018! ssh jhhur@50.1.107.100'
+alias sftp-genai-tesla-v100='sshpass -pmplab2018! sftp jhhur@50.1.107.100'
+alias ssh-genai-titan-xp='sshpass -pmplab2018! ssh user@50.1.107.102'
+alias sftp-genai-titan-xp='sshpass -pmplab2018! sftp user@50.1.107.102'
+alias ssh-genai-titan-xp-tester='sshpass -pvideoinpaint.2021 ssh tester@50.1.107.102'
+alias sftp-genai-titan-xp-tester='sshpass -pvideoinpaint.2021 sftp tester@50.1.107.102'
+alias ssh-genai-lsgs-titan-xp='sshpass -pwjdwldus11 ssh -p40022 jyjung@superN.synology.me'
+alias ssh-giant='sshpass -pskt1111123 ssh -p 22222 skt1111123@172.27.53.9'
+alias sftp-giant='sshpass -pskt1111123 sftp -oPort=22222 skt1111123@172.27.53.9'
+
+# zmv
+# zmv PATTERN REPLACEMENT
+# zmv 'input(*.png)' 'output$1'  # shell glob expression
+# zmv -w 'input*.png' 'output$1.png'
+# https://unix.stackexchange.com/questions/1136/batch-renaming-files
+autoload zmv
+
+# Reloading the completion for zsh-completions
+autoload -U compinit && compinit
+
+# Binding keys for zsh-autosuggestions
+bindkey '^ ' autosuggest-accept
+
+# Binding keys for zsh-history-substring-search
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+
+function weather() { curl -s "wttr.in/$1?m1" }
+
+function timer() {
+    total=$1
+    for ((i=total; i>0; i--)); do sleep 1; printf "Time remaining $i secs \r"; done
+    echo -e "\a"
+}
+
+function up() {
+    times=$1
+    while [ "$times" -gt "0" ]; do
+        cd ..
+        times=$(($times - 1))
+    done
+}
+
+function extract () {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1    ;;
+            *.tar.gz)    tar xvzf $1    ;;
+            *.tar.xz)    tar Jxvf $1    ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       rar x $1       ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xvf $1     ;;
+            *.tbz2)      tar xvjf $1    ;;
+            *.tgz)       tar xvzf $1    ;;
+            *.zip)       unzip -d `echo $1 | sed 's/\(.*\)\.zip/\1/'` $1;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)           echo "don't know how to extract '$1'" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+function count-all () {
+    ls -l $1 | grep -v '^total' | wc -l
+}
+
+function count-files () {
+    ls -l $1 | grep -v '^total' | grep -v "^d" | wc -l
+}
+
+function count-dirs () {
+    ls -l $1 | grep -v '^total' | grep "^d" | wc -l
+}
+
+# Exchange rate
+# Example URL: curl -s -X POST "https://markets.businessinsider.com/ajax/ExchangeRate_GetConversionForCurrenciesNumbers?isoCodeForeign=USD&isoCodeLocal=KRW&amount=1&date=2022-12-30"
+
+EXCHANGERATE_API='https://markets.businessinsider.com/ajax/'
+
+get_exc_rate () {
+    isoCodeForeign=$1
+    isoCodeLocal=$2
+    amount=$3
+    date=$4
+    cacheFile="/tmp/exchange-rate-$date-$amount-$isoCodeForeign-$isoCodeLocal.json"
+
+    # Check if we have cached the result to avoid front-running the API
+    if ! [ -e "$cacheFile" ]; then
+        post_vars=(
+            isoCodeForeign="$isoCodeForeign"
+            isoCodeLocal="$isoCodeLocal"
+            amount="$amount"
+            date="$date"
+        )
+        method='ExchangeRate_GetConversionForCurrenciesNumbers'
+        IFS='&' url="$EXCHANGERATE_API$method?${post_vars[*]}"
+        curl -s -X POST "$url" > "$cacheFile"
+    fi
+    jq -r '.ConvertedAmountFourDigits' "$cacheFile"
+}
+
+function exc_rate_usd_krw () {
+    ## Set LC_NUMERIC=C because the float format returned is using . as decimal
+    LC_NUMERIC=C printf 'The exchange rate for USD to KRW today is: %.4f\n' \
+             "$(get_exc_rate USD KRW 1 "$(date '+%Y-%m-%d')")"
+}
+
+# For emacs tramp
+# https://www.bounga.org/tips/2017/11/30/fix-emacs-tramp-lag-and-timeout/
+[ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
+
+# Shell-side configuration for 'vterm'
+vterm_printf(){
+    if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
+        # Tell tmux to pass the escape sequences through
+        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+    elif [ "${TERM%%-*}" = "screen" ]; then
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$1"
+    else
+        printf "\e]%s\e\\" "$1"
+    fi
+}
+
+# rust
+. "$HOME/.cargo/env"
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## pyenv
+#export PATH="$HOME/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/1111123/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/1111123/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/1111123/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/1111123/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/Users/1111123/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/1111123/miniforge3/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+# Added by Windsurf
+export PATH="/Users/1111123/.codeium/windsurf/bin:$PATH"
