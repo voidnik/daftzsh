@@ -246,7 +246,7 @@ function exc_rate_usd_krw () {
 [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
 
 # Shell-side configuration for 'vterm'
-vterm_printf(){
+vterm_printf () {
     if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
         # Tell tmux to pass the escape sequences through
         printf "\ePtmux;\e\e]%s\007\e\\" "$1"
