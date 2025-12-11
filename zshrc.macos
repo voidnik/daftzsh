@@ -271,6 +271,9 @@ export NVM_DIR="$HOME/.nvm"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
 
+# Added by Windsurf
+export PATH="/Users/daftcoder/.codeium/windsurf/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/daftcoder/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -284,11 +287,18 @@ else
     fi
 fi
 unset __conda_setup
-
-if [ -f "/Users/daftcoder/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/Users/daftcoder/miniforge3/etc/profile.d/mamba.sh"
-fi
 # <<< conda initialize <<<
 
-# Added by Windsurf
-export PATH="/Users/daftcoder/.codeium/windsurf/bin:$PATH"
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba shell init' !!
+export MAMBA_EXE='/Users/daftcoder/miniforge3/bin/mamba';
+export MAMBA_ROOT_PREFIX='/Users/daftcoder/miniforge3';
+__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    alias mamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
