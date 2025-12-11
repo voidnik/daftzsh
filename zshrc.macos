@@ -273,22 +273,22 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/1111123/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/daftcoder/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/1111123/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/Users/1111123/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/Users/daftcoder/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/Users/daftcoder/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/1111123/miniforge3/bin:$PATH"
+        export PATH="/Users/daftcoder/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/Users/1111123/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/Users/1111123/miniforge3/etc/profile.d/mamba.sh"
+if [ -f "/Users/daftcoder/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/Users/daftcoder/miniforge3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
 # Added by Windsurf
-export PATH="/Users/1111123/.codeium/windsurf/bin:$PATH"
+export PATH="/Users/daftcoder/.codeium/windsurf/bin:$PATH"
